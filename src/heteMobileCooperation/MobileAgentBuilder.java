@@ -1,4 +1,4 @@
-package heteMobileCooperatiom;
+package heteMobileCooperation;
 
 import repast.simphony.context.Context;
 import repast.simphony.context.DefaultContext;

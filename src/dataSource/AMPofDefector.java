@@ -5,7 +5,7 @@ package dataSource;
 
 import java.util.Iterator;
 
-import heteMobileCooperatiom.MobileAgent;
+import heteMobileCooperation.MobileAgent;
 import repast.simphony.context.Context;
 import repast.simphony.data2.AggregateDataSource;
 import repast.simphony.engine.environment.RunEnvironment;

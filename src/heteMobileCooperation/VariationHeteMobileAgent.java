@@ -1,4 +1,4 @@
-package heteMobileCooperatiom;
+package heteMobileCooperation;
 
 import repast.simphony.engine.schedule.ScheduledMethod;
 

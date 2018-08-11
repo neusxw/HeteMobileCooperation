@@ -5,7 +5,7 @@ package dataSource;
 
 import java.util.Iterator;
 
-import heteMobileCooperatiom.MobileAgent;
+import heteMobileCooperation.MobileAgent;
 import repast.simphony.context.Context;
 import repast.simphony.data2.AggregateDataSource;
 import repast.simphony.engine.environment.RunEnvironment;
@@ -13,7 +13,9 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.util.ContextUtils;
 
 /**
- * @author nick
+ * @author Shen Xiaowei
+ * 
+ * 计算合作的Agent占所有Agent的比率
  *
  */
 public class CooperationRate implements AggregateDataSource {

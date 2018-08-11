@@ -1,4 +1,4 @@
-package heteMobileCooperatiom;
+package heteMobileCooperation;
 
 import java.io.File;
 import java.io.FileWriter;
