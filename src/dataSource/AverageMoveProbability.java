@@ -13,7 +13,9 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.util.ContextUtils;
 
 /**
- * @author nick
+ * @author Shen Xiaowei
+ * 
+ * 计算所有Agent的平均移动速度。
  *
  */
 public class AverageMoveProbability implements AggregateDataSource {

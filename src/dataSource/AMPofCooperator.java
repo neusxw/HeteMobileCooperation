@@ -13,7 +13,9 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.util.ContextUtils;
 
 /**
- * @author nick
+ * @author Shen Xiaowei
+ * 
+ * 计算所有合作者的平均移动速度。
  *
  */
 public class AMPofCooperator implements AggregateDataSource {
