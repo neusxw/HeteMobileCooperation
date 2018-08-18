@@ -25,7 +25,7 @@ public class  VariationHeteMobileAgent extends HeteMobileAgent{
 	public void offspring(){
 		super.offspring();
 		if (Math.random() < 0.01) {
-			if (strategy == 'c') {
+			if (strategy == 'C') {
 				strategy = 'D';
 			}else {
 				strategy = 'C';
