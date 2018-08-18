@@ -15,7 +15,7 @@ import repast.simphony.util.ContextUtils;
 /**
  * @author Shen Xiaowei
  * 
- * 计算合作的Agent占所有Agent的比率。
+ * 计算采取合作策略（C）的Agent占所有Agent的比率。
  *
  */
 public class CooperationRate implements AggregateDataSource {

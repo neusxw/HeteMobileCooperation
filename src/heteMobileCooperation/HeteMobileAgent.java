@@ -9,9 +9,10 @@ import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.space.graph.Network;
 import repast.simphony.util.ContextUtils;
 
-/*
- * 移动Agent
+/** 
  * @author Shen Xiaowei
+ * 异质性移动Agent。
+ * 此处的异质性主要表现为个体的初始一定概率不同。
  */
 
 public class  HeteMobileAgent extends MobileAgent{
