@@ -81,7 +81,7 @@ public class MobileAgent {
 	public void offspring(){
 		
 		Context<Object> context = ContextUtils.getContext(this);
-		Network<Object> net = (Network<Object>)context.getProjection("study network");
+		//Network<Object> net = (Network<Object>)context.getProjection("study network");
 		
 		List<MobileAgent> neighbors = findNeighbors();
 		neighbors.add(this);
@@ -104,7 +104,6 @@ public class MobileAgent {
 		if (electors.size() > 0) {		
 			//SimUtilities.shuffle(electors, RandomHelper.getUniform());
 			MobileAgent elector = electors.get(0);
-
 			strategy = elector.strategy;
 		}
 	}
@@ -228,12 +227,5 @@ public class MobileAgent {
 	 */
 	public double getMoveProbability() {
 		return moveProbability;
-	}
-
-	/**
-	 * @param moveProbability the moveProbability to set
-	 */
-	public void setMoveProbability(double moveProbability) {
-		this.moveProbability = moveProbability;
 	}
 }

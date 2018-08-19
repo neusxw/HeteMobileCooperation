@@ -32,7 +32,7 @@ public class  HeteMobileAgent extends MobileAgent{
 	@ScheduledMethod(start = 1, interval = 1, priority = 2)
 	public void offspring(){
 		Context<Object> context = ContextUtils.getContext(this);
-		Network<Object> net = (Network<Object>)context.getProjection("study network");
+		//Network<Object> net = (Network<Object>)context.getProjection("study network");
 
 		List<MobileAgent> neighbors = findNeighbors();
 		neighbors.add(this);
@@ -45,9 +45,9 @@ public class  HeteMobileAgent extends MobileAgent{
 			}
 		}
 
-		for (MobileAgent another : neighbors) {
-			if(Math.abs(another.getPayoff() - maxPayoff) < Math.pow(10, -6)) {
-				electors.add(another);
+		for (MobileAgent agent : neighbors) {
+			if(Math.abs(agent.getPayoff() - maxPayoff) < Math.pow(10, -10)) {
+				electors.add(agent);
 			}
 		}
 
