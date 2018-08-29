@@ -67,3 +67,6 @@ iOSInjectionProject/
 
 ##Java
 *.class
+*.1
+*.tmp
+*.log
