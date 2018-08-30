@@ -31,6 +31,10 @@ public class  HeteMobileAgent extends MobileAgent{
 	 */
 	@ScheduledMethod(start = 1, interval = 1, priority = 2)
 	public void offspring(){
+		if (ID == 500) {
+			System.out.println("offspring--father");
+		}
+
 		Context<Object> context = ContextUtils.getContext(this);
 		//Network<Object> net = (Network<Object>)context.getProjection("study network");
 

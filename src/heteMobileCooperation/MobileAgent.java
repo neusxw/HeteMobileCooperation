@@ -55,6 +55,9 @@ public class MobileAgent {
 	 */
 	@ScheduledMethod(start = 1, interval = 1, priority = 3)
 	public void combat() {
+		if (ID == 500) {
+			System.out.println("combat");
+		}
 		oldStrategy = strategy;
 		List<MobileAgent> neighbors = findNeighbors(); 
 		payoff = 0;
@@ -79,7 +82,7 @@ public class MobileAgent {
 	 */
 	@ScheduledMethod(start = 1, interval = 1, priority = 2)
 	public void offspring(){
-		
+		//System.out.println("offspring");
 		Context<Object> context = ContextUtils.getContext(this);
 		//Network<Object> net = (Network<Object>)context.getProjection("study network");
 		
@@ -113,7 +116,10 @@ public class MobileAgent {
 	 */
 	@ScheduledMethod(start = 1, interval = 1, priority = 1)
 	public void move(){
-		//System.out.print("1");
+		if (ID == 500) {
+			System.out.println("move");
+		}
+		
 		Context<Object> context = ContextUtils.getContext(this);
 		Grid<Object> grid = (Grid<Object>)context.getProjection("Grid");
 
