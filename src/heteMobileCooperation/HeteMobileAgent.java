@@ -11,8 +11,8 @@ import repast.simphony.util.ContextUtils;
 
 /** 
  * @author Shen Xiaowei
- * 异质性移动Agent。
- * 此处的异质性主要表现为个体的初始一定概率不同。
+ * 1.异质性移动Agent：此处的异质性主要表现为个体的初始一定概率不同。
+ * 2.移动性
  */
 
 public class  HeteMobileAgent extends MobileAgent{
@@ -25,16 +25,12 @@ public class  HeteMobileAgent extends MobileAgent{
 
 	
 	/**
-	 * @Overriding
+	 *@Overriding
 	 * reproduce.
 	 * 更新策略
 	 */
 	@ScheduledMethod(start = 1, interval = 1, priority = 2)
 	public void offspring(){
-		if (ID == 500) {
-			System.out.println("offspring--father");
-		}
-
 		Context<Object> context = ContextUtils.getContext(this);
 		//Network<Object> net = (Network<Object>)context.getProjection("study network");
 
