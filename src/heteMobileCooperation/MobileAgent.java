@@ -228,4 +228,11 @@ public class MobileAgent {
 	public double getMoveProbability() {
 		return moveProbability;
 	}
+	
+	/**
+	 * @Overriding
+	 */
+	public String toString() {
+		return Integer.toString(ID);
+	}
 }
