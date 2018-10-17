@@ -37,16 +37,16 @@ public class  HeteMobileAgent extends MobileAgent{
 		List<MobileAgent> neighbors = findNeighbors();
 		neighbors.add(this);
 		List<MobileAgent> electors = new ArrayList<MobileAgent>();
+		
 		double maxPayoff = 0;
-
 		for (MobileAgent another : neighbors) {
-			if(another.getPayoff() > maxPayoff) {
+			if(another.getPayoff() > maxPayoff ) {
 				maxPayoff = another.getPayoff();
 			}
 		}
 
 		for (MobileAgent agent : neighbors) {
-			if(Math.abs(agent.getPayoff() - maxPayoff) < Math.pow(10, -10)) {
+			if(Math.abs(agent.getPayoff() - maxPayoff) < Math.pow(10, -10) && agent.getPayoff() > this.payoff) {
 				electors.add(agent);
 			}
 		}

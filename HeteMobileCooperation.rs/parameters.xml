@@ -13,7 +13,7 @@
 									
 		/>
 				<parameter name="agentDensity" displayName="Agent Density" type="double" 
-						defaultValue="0.55" 
+						defaultValue="0.8" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									

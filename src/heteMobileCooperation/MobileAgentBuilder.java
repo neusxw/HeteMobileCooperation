@@ -67,7 +67,6 @@ public class MobileAgentBuilder implements ContextBuilder<Object> {
 			default:
 				agent = new MobileAgent(i+1);
 				break;
-
 			}
 
 			if (i < Math.round(m / 2)) {

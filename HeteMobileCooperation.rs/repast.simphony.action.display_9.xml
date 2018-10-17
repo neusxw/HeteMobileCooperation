@@ -3,19 +3,11 @@
   <type>2D</type>
   <styles>
     <entry>
-      <string>heteMobileCooperation.HeteMobileAgent</string>
-      <string>heteMobileCooperation.MobileAgentStyle2D</string>
-    </entry>
-    <entry>
       <string>heteMobileCooperation.MobileAgent</string>
       <string>heteMobileCooperation.MobileAgentStyle2D</string>
     </entry>
   </styles>
   <editedStyles>
-    <entry>
-      <string>heteMobileCooperation.HeteMobileAgent</string>
-      <null/>
-    </entry>
     <entry>
       <string>heteMobileCooperation.MobileAgent</string>
       <null/>
@@ -31,16 +23,12 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>922597522</hashCode>
+    <hashCode>1623955059</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>Grid</layoutProjection>
   <layoutInterval>0</layoutInterval>
   <layerOrder>
-    <entry>
-      <string>heteMobileCooperation.HeteMobileAgent</string>
-      <int>1</int>
-    </entry>
     <entry>
       <string>heteMobileCooperation.MobileAgent</string>
       <int>0</int>

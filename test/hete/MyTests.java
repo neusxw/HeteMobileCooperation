@@ -3,7 +3,7 @@ package hete;
 import static org.junit.Assert.*;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 
 import org.junit.After;
@@ -30,16 +30,22 @@ public class MyTests {
 	public Context context;
 	public Schedule schedule;
 
+	//所有测试开始之前运行。
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		System.out.println("BeforeClass");
 	}
 
+	//所有测试结果之后运行。
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+		System.out.println("AfterClass");
 	}
 
+	//每一个测试方法之前云行。
 	@Before
 	public void setUp() throws Exception {
+		System.out.println("Before");
 		/**
 		 * 1.建立RunEnvironment运行环境；
 		 * 2.建立context。
@@ -50,11 +56,11 @@ public class MyTests {
 		File paramsFile = new File(ScenarioUtils.getScenarioDir(),"parameters.xml");
 		ParametersParser pp = new ParametersParser(paramsFile );
 		Parameters params = pp.getParameters();
-		//1.2 建立Schedule
+		//1.2 建立Schedule进度表
 		schedule = new Schedule ();
 		//1.3 建立运行环境
 		RunEnvironment.init(schedule,null,params,true);
-		
+
 		//2  建立context
 		context = new DefaultContext();
 		RunState.init().setMasterContext(context);
@@ -63,33 +69,37 @@ public class MyTests {
 
 	}
 
+	//每一个测试方法之后运行。
 	@After
 	public void tearDown() throws Exception {
+		System.out.println("After");
 	}
-
 
 	@Test
 	public void testAddingPersonToContext () {
-		//System.out.println("OK!");
+		System.out.println("testAddingPersonToContext ()");
 		IndexedIterable<MobileAgent> it;
 		it = context.getObjects(MobileAgent.class);
 		assertTrue(it.size()>0);
 		schedule.execute();
-		
-		//System.out.println(it.size());
+		System.out.println(it.size());
 		MobileAgent agent = it.iterator().next();
 		Grid<Object> grid = (Grid<Object>)context.getProjection("Grid");
 		assertTrue(grid.getLocation(agent)!=null);
 		agent.combat();
 		agent.findEmptySites().size();
-		//System.out.println(agent.findNeighbors().size());
-		
 		it = context.getObjects(MobileAgent.class);
-		while(it.iterator().hasNext()) {
-			MobileAgent m = it.iterator().next();
-			assertTrue(m.findEmptySites().size()+m.findNeighbors().size()==4);
+		for (MobileAgent m:it) {
+			if(m.getID() % 1000 == 0) {
+				System.out.println(m.getID() + ":" + m.findNeighbors().size());
+				assertTrue(m.findEmptySites().size()+m.findNeighbors().size()==4);
+			}
 		}
-		
+	}
+
+	@Test
+	public void testTest () {
+		System.out.println("test!");
 	}
 
 }

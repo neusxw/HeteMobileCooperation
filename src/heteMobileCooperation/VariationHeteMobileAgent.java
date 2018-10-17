@@ -13,7 +13,7 @@ import repast.simphony.engine.schedule.ScheduledMethod;
 
 public class  VariationHeteMobileAgent extends HeteMobileAgent{
 
-	double variationRate = 0.01;
+	double variationRate = 0.001;
 
 	public VariationHeteMobileAgent(int ID){
 		super(ID);
@@ -43,11 +43,9 @@ public class  VariationHeteMobileAgent extends HeteMobileAgent{
 			if (moveProbability>1) {
 				moveProbability = 1;
 			}
-
 			if (moveProbability<0) {
 				moveProbability=0;
 			}
 		}
 	}
-
 }

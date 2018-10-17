@@ -71,4 +71,5 @@ iOSInjectionProject/
 *.tmp
 *.log
 *.txt
+*.xml
 /testbin/
