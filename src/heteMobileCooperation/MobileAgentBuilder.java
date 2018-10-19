@@ -43,7 +43,7 @@ public class MobileAgentBuilder implements ContextBuilder<Object> {
 				context, GridBuilderParameters.singleOccupancy2D(new RandomGridAdder(),
 						new WrapAroundBorders(), gridWidth, gridHeight));
 
-		createAgent("HeteMobileAgent",numAgents, context);
+		createAgent("MobileAgent",numAgents, context);
 		addObeserver(context);
 		//RunEnvironment.getInstance().pauseAt(100);
 
@@ -78,7 +78,6 @@ public class MobileAgentBuilder implements ContextBuilder<Object> {
 			context.add(agent);
 		}
 	}
-
 
 	public void addObeserver(Context<Object> context) {
 		Grid grid = (Grid)context.getProjection("Grid");

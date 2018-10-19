@@ -22,7 +22,7 @@ import repast.simphony.util.SimUtilities;
  */
 
 public class MobileAgent {
-	
+
 	protected final int ID;
 
 	/**
@@ -79,23 +79,21 @@ public class MobileAgent {
 	 */
 	@ScheduledMethod(start = 1, interval = 1, priority = 2)
 	public void offspring(){
-		//System.out.println("offspring");
+
 		Context<Object> context = ContextUtils.getContext(this);
-		//Network<Object> net = (Network<Object>)context.getProjection("study network");
-		
 		List<MobileAgent> neighbors = findNeighbors();
-		neighbors.add(this);
+		//neighbors.add(this);
 		List<MobileAgent> electors = new ArrayList<MobileAgent>();
 		double maxPayoff = 0;
-		
+
 		for (MobileAgent another : neighbors) {
 			if(another.getPayoff() > maxPayoff) {
 				maxPayoff = another.getPayoff();
 			}
 		}
-		
+
 		for (MobileAgent another : neighbors) {
-			if(Math.abs(another.getPayoff() - maxPayoff) < Math.pow(10, -6)) {
+			if(Math.abs(another.getPayoff() - maxPayoff) < Math.pow(10, -6) && another.getPayoff() > this.payoff) {
 				electors.add(another);
 			}
 		}
@@ -104,7 +102,7 @@ public class MobileAgent {
 		if (electors.size() > 0) {		
 			//SimUtilities.shuffle(electors, RandomHelper.getUniform());
 			MobileAgent elector = electors.get(0);
-			strategy = elector.strategy;
+			copyProperty(elector);
 		}
 	}
 
@@ -113,7 +111,7 @@ public class MobileAgent {
 	 */
 	@ScheduledMethod(start = 1, interval = 1, priority = 1)
 	public void move(){
-		
+
 		Context<Object> context = ContextUtils.getContext(this);
 		Grid<Object> grid = (Grid<Object>)context.getProjection("Grid");
 
@@ -162,7 +160,7 @@ public class MobileAgent {
 		while (it.hasNext()) {
 			neighbors.add(it.next());
 		}
-		
+
 		it = grid.getObjectsAt(pt.getX(),pt.getY()+1).iterator();
 		while (it.hasNext()) {
 			neighbors.add(it.next());
@@ -175,64 +173,43 @@ public class MobileAgent {
 		while (it.hasNext()) {
 			neighbors.add(it.next());
 		}
-		
+
 		Collections.shuffle(neighbors);
 		return neighbors;
 	}
 
-	/**
-	 * @return the strategy
-	 */
+	private void copyProperty(MobileAgent a) {
+		this.strategy = a.strategy;
+		this.moveProbability = a.moveProbability;
+	}
+	
+	
+
 	public char getStrategy() {
 		return strategy;
 	}
-
-	/**
-	 * @param strategy the strategy to set
-	 */
 	public void setStrategy(char strategy) {
 		this.strategy = strategy;
 	}
-
-	/**
-	 * @return the oldStrategy
-	 */
 	public char getOldStrategy() {
 		return oldStrategy;
 	}
+	public void setOldStrategy(char strategy) {
+		this.oldStrategy = strategy;
 
-	/**
-	 * @param oldStrategy the oldStrategy to set
-	 */
-	public void setOldStrategy(char oldStrategy) {
-		this.oldStrategy = oldStrategy;
-	}
-
-	/**
-	 * @return the payoff
-	 */
+	}	
 	public double getPayoff() {
 		return payoff;
 	}
-
-	/**
-	 * @return the iD
-	 */
 	public int getID() {
 		return ID;
 	}
-	
-	/**
-	 * @return the moveProbability
-	 */
 	public double getMoveProbability() {
 		return moveProbability;
 	}
-	
-	/**
-	 * @Overriding
-	 */
 	public String toString() {
-		return Integer.toString(ID);
+		return "ID = " + Integer.toString(ID);
 	}
+
+
 }
