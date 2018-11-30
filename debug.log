@@ -724,3 +724,23 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 
 	at heteMobileCooperation.MobileAgent.move(MobileAgent.java:117)
 	... 10 more
+INFO  [AWT-EventQueue-0] 2018-10-23 22:38:26,102 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: D:\GitHub\Reast\HeteMobileCooperation\output\config.props
+INFO  [AWT-EventQueue-0] 2018-10-23 22:38:26,327 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	D:\GitHub\Reast\HeteMobileCooperation\batch\batch_params.xml to
+	C:\Users\ADMINI~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2018-10-23 22:38:35,490 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\ADMINI~1\AppData\Local\Temp\Administrator_localhost5091085201589955510.zip to 
+C:\Users\ADMINI~1\AppData\Local\Temp\simphony_model_1540305512849 ...
+INFO  [SwingWorker-pool-2-thread-1] 2018-10-23 22:38:35,531 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2018-10-23 22:38:35,533 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0447
+INFO  [SwingWorker-pool-2-thread-1] 2018-10-23 22:38:35,533 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\ADMINI~1\AppData\Local\Temp\simphony_model_1540305512849\Administrator_localhost5091085201589955510.zip
+INFO  [SwingWorker-pool-2-thread-1] 2018-10-23 22:38:36,161 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [AWT-EventQueue-0] 2018-10-23 22:39:20,696 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: D:\GitHub\Reast\HeteMobileCooperation\output\config.props
+INFO  [AWT-EventQueue-0] 2018-10-23 22:39:20,700 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	D:\GitHub\Reast\HeteMobileCooperation\batch\batch_params.xml to
+	C:\Users\ADMINI~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [pool-3-thread-1] 2018-10-23 22:39:36,167 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\ADMINI~1\AppData\Local\Temp\simphony_model_1540305512849 for DONE:  no
+INFO  [pool-3-thread-1] 2018-10-23 22:40:36,167 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\ADMINI~1\AppData\Local\Temp\simphony_model_1540305512849 for DONE:  no
+INFO  [pool-3-thread-1] 2018-10-23 22:41:36,167 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\ADMINI~1\AppData\Local\Temp\simphony_model_1540305512849 for DONE:  no
+INFO  [pool-3-thread-1] 2018-10-23 22:42:36,167 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\ADMINI~1\AppData\Local\Temp\simphony_model_1540305512849 for DONE:  no
+INFO  [pool-3-thread-1] 2018-10-23 22:43:36,167 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\ADMINI~1\AppData\Local\Temp\simphony_model_1540305512849 for DONE:  no

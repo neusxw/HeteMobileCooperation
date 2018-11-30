@@ -1,3 +1,1 @@
-<?xml version="1.0"?>
-<sweep runs="1">
-</sweep>
+<?xml version="1.0" ?><sweep runs="1"><parameter name="gridHeight" type="constant" constant_type="int" value="100"></parameter><parameter name="agentDensity" type="constant" constant_type="double" value="0.7"></parameter><parameter name="moveProbability" type="constant" constant_type="double" value="0.1"></parameter><parameter name="gridWidth" type="constant" constant_type="int" value="100"></parameter></sweep>
